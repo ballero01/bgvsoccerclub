@@ -8,10 +8,6 @@ Per la parte della gestione del database e la creazione delle api è stato usato
 Per il frontend è stato usato Angular, con l'aiuto per lo stile di Bootstrap v. 5.3
 RDBMS MySQL
 
-Per accedere al sito le fornisco email e password:
-- email: mirkoballero@gmail.com
-- password: Mirko1
-
 Non tutte le parti del sito sono state implementate.
 Le parti attive sono:
 - Gestione rosa -> Gestisci Rosa
