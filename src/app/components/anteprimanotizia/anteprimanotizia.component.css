@@ -1,0 +1,25 @@
+.contImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titolo{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .imgCont{
+        height: 200px !important;
+    }
+
+    .contImg{
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .contImg > *{
+        border-radius: 0 !important;
+    }
+}

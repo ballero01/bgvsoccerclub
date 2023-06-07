@@ -1,0 +1,87 @@
+<div id="mainContainer">
+  <!--<div id="titleHome">
+    Benvenuti sul sito ufficiale della BGV Soccer Club
+  </div>-->
+
+  <div *ngIf="!stagioneIniziata" id="countDownNextSeason">
+    <span id="titleCountdown">Countdown all'inizio della prossima stagione:</span>
+    <span id="countdown">{{this.tempo}}</span>
+  </div>
+
+  <hr>
+
+  <div>
+    <!--<div *ngIf="onLoad" style="width: 100%; display: flex; justify-content: center; align-items: center; 
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 100;">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>-->
+    <div *ngIf="onLoad" id="contLoad">
+      <div class="preview">
+      <div class="card" style="max-height: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4 bg-secondary contImg">
+            
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <div class="row no-gutters">
+                <div class="col-6">
+                  <p class="card-text"><small class="text-body-secondary placeholder col-4"></small></p>
+                </div>
+                <div class="col-6"
+                  style="text-align: right; text-decoration: underline; color: rgb(75, 75, 255); cursor: pointer;">
+                  <a></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div *ngIf="!onLoad">
+      <div id="titleHomeNotizie">
+        Le ultime notizie
+      </div>
+      <div *ngIf="this.tutteLeNotizie?.length > 0; else noNotizie" id="containerPreview">
+        <div *ngFor="let notizia of this.tutteLeNotizie | slice:(index-1):((index-1) + notiziePerVolta)" class="preview">
+          <app-anteprimanotizia [notizia]="notizia"></app-anteprimanotizia>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <button class="page-link" (click)="previous()" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </button>
+            </li>
+            <li *ngFor="let pagina of iterNumPagine" class="page-item"><button (click)="vai(pagina+1)" class="page-link"
+                [ngStyle]="index == (pagina + 1) ? {'background-color': '#74b9ff', 'color' : 'white'} : {}">{{pagina +
+                1}}</button></li>
+            <li class="page-item">
+              <button class="page-link" (click)="next()" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <ng-template #noNotizie>
+      <div>
+        Ancora nessuna notizia. Torna presto!
+      </div>
+    </ng-template>
+  </div>
+</div>

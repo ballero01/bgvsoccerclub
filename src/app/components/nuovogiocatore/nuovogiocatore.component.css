@@ -1,0 +1,137 @@
+#mainContainer{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+#btnPlus{
+    background-color: rgb(0, 0, 188);
+    color: white;
+    transition: 0.1s linear;
+}
+
+#btnPlus:hover{
+    background-color: rgb(0, 0, 255);
+}
+
+#formG{
+    display: flex;
+    flex-direction: column;
+}
+
+.formTitle{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 0px !important;
+    height: 24px !important;
+}
+
+.in1{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.in1 > div, select{
+    min-width: 200px;
+    min-height: 58px;
+}
+
+.form-control{
+    width: 200px !important;
+}
+
+.in1 > select{
+    width: 250px !important;
+}
+
+.in1 > button{
+    min-height: 58px;
+    min-width: 58px !important;
+    background-color: blue;
+    color: white;
+    border: 1px solid rgb(115, 115, 115);
+    border-radius: 14px;
+    transition: 0.1s ease-out;
+}
+
+
+
+#btnAdd{
+    transition: 0.2s linear;
+}
+
+.in1 > button:hover>#btnAdd{
+    width: 30px;
+    height: 30px;
+}
+
+.in1 > button:active{
+    min-width: 50px !important;
+    min-height: 50px !important;
+    margin: 0 4px;
+}
+
+.in1 > button:disabled{
+    pointer-events: none;
+    background-color: rgb(126, 126, 126);
+}
+
+#titleG{
+    font-size: 22px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.giocatoreCont{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 14px;
+    color: white;
+    margin: 4px;
+    padding: 3px 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.giocatoreCont > *{
+    flex: 1 1 0px;
+}
+
+.btnAtt{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.alerts-background {
+    animation: blink 1s;
+    animation-iteration-count: 3;
+}
+
+@keyframes blink { 50% { background-color: white ; color: black; }  }
+
+@media (max-width: 640px){
+    .giocatoreCont{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 14px;
+        color: white;
+        margin: 4px;
+        padding: 3px 0px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,21 @@
+<div *ngIf="!this.auth.isLoggedIn()" id="loginContainer">
+  <div id="loginTitle">
+    Login
+  </div>
+  <form [formGroup]="form" id="formLogin" (ngSubmit)="onSubmit()">
+    <div [hidden]="loginOk" class="form-floating mb-0" style="color: red;">
+      {{textLogin}}
+    </div>
+    <div class="form-floating mb-0">
+      <input type="email" class="form-control" id="floatingInput" placeholder="mariorossi@gmail.com" name="email" formControlName="email">
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" formControlName="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating">
+      <input id="btnLogin" class="btn" type="submit" value="Login" [disabled]="!form.valid">
+    </div>
+  </form>
+</div>

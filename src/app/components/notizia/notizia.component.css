@@ -1,0 +1,31 @@
+#title{
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#contImg{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#divImg{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#testo{
+    padding: 0px 20px;
+    text-align: justify;
+}
+
+#dataautore{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: rgb(95, 95, 95);
+}

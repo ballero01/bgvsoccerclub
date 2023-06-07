@@ -1,0 +1,24 @@
+<div class="card" style="max-height: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 contImg">
+      <img
+        src="https://www.bgvsoccerclub.it/files/imgNotizie/{{notizia.immagineCopertina}}.{{notizia.immagineCopertinaExt}}"
+        class="img-fluid rounded-start imgCont" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{notizia?.titolo}}</h5>
+        <p class="card-text" [innerHTML]="notizia?.testo.substring(0, 80) + '...'"></p>
+        <div class="row no-gutters">
+          <div class="col-6">
+            <p class="card-text"><small class="text-body-secondary">{{notizia?.datapubblicazione | date: "dd/MM/Y HH:mm"}}</small></p>
+          </div>
+          <div class="col-6"
+            style="text-align: right; text-decoration: underline; color: rgb(75, 75, 255); cursor: pointer;">
+            <a [routerLink]="'/notizia/' + notizia.id">Leggi tutta la notizia</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

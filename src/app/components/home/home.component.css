@@ -1,0 +1,119 @@
+#mainContainer{
+    margin-bottom: 20px;
+}
+
+#containerPreview{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.preview{
+    width: 60vw;
+}
+
+#titleHome{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.contImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titolo{
+    width: 100%;
+    text-align: center;
+}
+
+#contLoad{
+    justify-content: center;
+    align-items: center;
+}
+
+#titleHomeNotizie{
+    width: 100%;
+    text-align: center;
+    font-weight: 20;
+    font-size: 22px;
+}
+
+#countDownNextSeason{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    background: url("/assets/img/bgvfinestagione.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 220px;
+}
+
+#countDownNextSeason > span{
+    padding: 10px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65);
+    width: 70%;
+}
+
+#titleCountdown{
+    font-size: 20px;
+}
+
+#countdown{
+    font-size: 30px;
+}
+
+@media (max-width: 670px){
+    .preview{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #countDownNextSeason{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        margin: 20px auto;
+        border: 0.3px solid rgb(156, 156, 156);
+        border-radius: 20px;
+    }
+
+    #titleCountdown{
+        font-size: 18px;
+    }
+
+    #countdown{
+        font-size: 18px;
+    }
+
+
+    .imgCont{
+        height: 200px !important;
+    }
+
+    .contImg{
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .contImg > *{
+        border-radius: 0 !important;
+    }
+}

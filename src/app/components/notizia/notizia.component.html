@@ -1,0 +1,17 @@
+<div id="title">
+    {{notizia?.titolo}}
+</div>
+<div id="contImg">
+    <img id="divImg" [src]="'https://www.bgvsoccerclub.it/files/imgNotizie/' + notizia?.immagineCopertina + '.' + notizia?.immagineCopertinaExt" alt="">
+</div>
+<div [innerHTML]="notizia?.testo" id="testo">
+    
+</div>
+<div id="dataautore">
+    <div id="data">
+        {{notizia?.datapubblicazione | date: "dd/MM/Y HH:mm"}}
+    </div>
+    <div id="autore">
+        {{notizia?.autore}}
+    </div>
+</div>

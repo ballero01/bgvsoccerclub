@@ -1,0 +1,49 @@
+<div id="mainContainer">
+    <div id="squadraContainer">
+        <div id="portieri">
+            <div class="titleSec">
+                Portieri
+            </div>
+            <div class="contGiocatori">
+                <div *ngFor="let g of portieri">
+                    {{g.cognome}} {{g.nome}}
+                </div>
+            </div>
+            
+        </div>
+        <div id="difensori">
+            <div class="titleSec">
+                Difensori
+            </div>
+            <div class="contGiocatori">
+                <div *ngFor="let g of difensori">
+                    {{g.cognome}} {{g.nome}}
+                </div>
+            </div>
+        </div>
+        <div id="centrocampisti">
+            <div class="titleSec">
+                Centrocampisti
+            </div>
+            <div class="contGiocatori">
+                <div *ngFor="let g of centrocampisti">
+                    {{g.cognome}} {{g.nome}}
+                </div>
+            </div>
+        </div>
+        <div id="attaccanti">
+            <div class="titleSec">
+                Attaccanti
+            </div>
+            <div class="contGiocatori">
+                <div *ngFor="let g of attaccanti">
+                    {{g.cognome}} {{g.nome}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="dirigenzaContainer">
+
+    </div>
+</div>

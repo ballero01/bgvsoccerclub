@@ -1,0 +1,31 @@
+<div id="mainContainer">
+    <div id="componentiOra">
+        <div *ngFor="let c of allComponenti">
+            {{c.cognome}}
+        </div>
+    </div>
+
+    <div id="contForm">
+        <div style="font-size: 20px;">
+            Registra componente
+        </div>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="cognome" id="cognome" placeholder="cognome" ngModel required>
+                <label for="cognome">Cognome</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="nome" ngModel required>
+                <label for="nome">Nome</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="linkRuoloComponente" id="linkRuoloComponente" aria-label="Floating label select example" ngModel required="">
+                  <option value="" selected>Seleziona ruolo</option>
+                  <option *ngFor="let ruolo of this.allRuoliComponenti" [value]="ruolo.id">{{ruolo.descrizione}}</option>
+                </select>
+                <label for="linkRuoloComponente">Ruolo</label>
+              </div>
+            <button id="btnRegistra" class="shadow" [disabled]="!form.valid" type="submit">Registra</button>
+        </form>
+    </div>
+</div>

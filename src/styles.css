@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Consolas', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  word-break: break-word;
+  background: none;
+}
+
+body, app-root{
+  display: block;
+  height: 100vh !important;
+  min-width: 300px !important;
+  position: relative;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+/*
+html {
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  margin: 0 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: none; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #636363;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444; 
+}
+
+*/
+
+/*-------------------------------------------*/
+
+app-footer {
+  position: sticky;
+  top: 100%;
+  width: 100%;
+  display: flex;
+  height: max-content;
+}
+
+footer{
+  width: 100%;
+}
+app-login{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+app-gestione{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  justify-content: center;
+}
+
+app-gestione > *{
+  width: 30%;
+}
+
+app-rosa{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  justify-content: center;
+}
+
+app-rosa > *{
+  width: 30%;
+}
+
+app-nuovogiocatore, app-nuovanotizia, app-home, 
+app-notizia, #contLoad, app-gestionecompetizioni,
+app-gestionecomponenti, app-squadra{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0;
+}
+
+/*-------------------------------------------*/
+ 
+.boxC{
+  outline: 2px solid rgb(142, 142, 142);
+  padding: 14px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.1s linear;
+  margin: 20px 0;
+}
+
+.boxC:hover{
+  box-shadow: 0 .3rem 0.6rem rgba(0,0,0,.15)!important;
+  color: blue;
+  text-decoration: underline;
+}
+
+.boxTitle{
+  font-size: 22px;
+  color: black;
+}
+
+.boxDescription{
+  font-size: 14px;
+  color: rgb(64, 64, 64);
+}
+
+@media (max-width: 640px){
+  app-nuovogiocatore{
+    width: 100%;
+  }
+
+  .boxC{
+    outline: 2px solid rgb(142, 142, 142);
+    padding: 14px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s linear;
+    width: 100%;
+    margin: 20px 10px;
+  }
+}

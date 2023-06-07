@@ -1,0 +1,154 @@
+<div *ngIf="!aggiungiOra" id="mainContainer">
+    <a id="btnPlus" class="btn" (click)="change()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </svg> Inserisci giocatore
+    </a>
+</div>
+<div *ngIf="aggiungiOra" id="mainContainer">
+    <a id="btnPlus" class="btn" (click)="change()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+        </svg>
+    </a>
+</div>
+<div *ngIf="aggiungiOra">
+    <form [formGroup]="form" id="formG">
+        <div class="in1">
+            <div class="formTitle">
+                Dati anagrafici
+            </div>
+            <input type="text" hidden value="0" name="idU" formControlName="idU">
+            <div class="form-floating mb-0">
+                <input type="text" class="form-control" id="floatingInput1" placeholder="mariorossi@gmail.com" name="nome" formControlName="nome">
+                <label for="floatingInput1">Nome</label>
+            </div>
+            <div class="form-floating mb-0">
+                <input type="text" class="form-control" id="floatingInput2" placeholder="aa" name="cognome" formControlName="cognome">
+                <label for="floatingInput2">Cognome</label>
+            </div>
+            <div class="form-floating mb-0">
+                <input type="date" class="form-control" id="floatingInput3" placeholder="aa" name="dataDiNascita" formControlName="dataDiNascita">
+                <label for="floatingInput3">Data di nascita</label>
+            </div>
+        </div>
+        <div class="in1">
+            <div class="formTitle">
+                Documento di identificazione
+            </div>
+            <select class="form-select" aria-label="Default select example" name="tipoTessera" formControlName="tipoTessera">
+                <option value="0" selected>Tipo di documento</option>
+                <option value="1">Tessera</option>
+                <option value="2">Carta d'identità</option>
+            </select>
+            <div *ngIf="form.value.tipoTessera == 0 || form.value.tipoTessera == undefined" class="form-floating mb-0">
+                <input disabled type="text" class="form-control" id="floatingInput4" placeholder="aa">
+                <label for="floatingInput4"></label>
+            </div>
+            <div *ngIf="form.value.tipoTessera == 1" class="form-floating mb-0">
+                <input type="text" class="form-control" id="floatingInput5" placeholder="aa" name="numeroTessera" formControlName="numeroTessera">
+                <label for="floatingInput5">Numero tessera</label>
+            </div>
+            <div *ngIf="form.value.tipoTessera == 2" class="form-floating mb-0">
+                <input type="text" class="form-control" id="floatingInput6" placeholder="aa" name="cartaIdentita" formControlName="cartaIdentita">
+                <label for="floatingInput6">Carta d'identità</label>
+            </div>
+
+            <div class="form-floating mb-0">
+                <input type="text" class="form-control" id="floatingInput7" placeholder="aa" name="codFiscale" formControlName="codFiscale">
+                <label for="floatingInput7">Codice Fiscale</label>
+            </div>
+            <div class="in1" style="margin-bottom: 20px;">
+                <div class="formTitle">
+                    Altro
+                </div>
+                <div class="form-floating mb-0">
+                    <input type="text" class="form-control" id="floatingInput8" placeholder="aa" name="numeroMatricola" formControlName="numeroMatricola">
+                    <label for="floatingInput8">Numero matricola</label>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="ruolo" formControlName="ruolo">
+                    <option value="0" selected>Ruolo</option>
+                    <option *ngFor="let ruolo of allruoli" [value]="ruolo.id">{{ruolo.ruolo}} {{ruolo.spec}}</option>
+                </select>
+                <button  [disabled]="!form.valid" type="submit" (click)="onSubmit()"><svg *ngIf="!onUpdate" id="btnAdd" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                </svg>
+                <svg *ngIf="onUpdate" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg></button>
+            </div>
+            
+        </div>
+        
+    </form>
+</div>
+<div style="margin-bottom: 1.5em;">
+    <div id="titleG">
+        Lista giocatori
+    </div>
+    <div class="giocatoreCont" style="font-weight: bold; font-size: 18px; margin-bottom: 10px; color: black !important;">
+        <div>
+            Cognome
+        </div>
+        <div>
+            Nome
+        </div>
+        <div>
+            Data di nascita
+        </div>
+        <div>
+            Ruolo
+        </div>
+        <div>
+            
+        </div>
+        <div>
+
+        </div>
+        <div>
+            Disattiva/Attiva
+        </div>
+    </div>
+    <div *ngFor="let giocatore of allgiocatori" class="giocatoreCont" [ngClass]="{'alerts-background': lastInsertId+'' == giocatore.id}" [ngStyle]="{'background-color': giocatore.isAttivo == 1 ? giocatore.colore : 'grey'}">
+        
+        <div>
+            {{giocatore.cognome}}
+        </div>
+        <div>
+            {{giocatore.nome}}
+        </div>
+        <div>
+            {{giocatore.dataDiNascita | date: "dd/MM/YYYY"}}
+        </div>
+        <div>
+            {{giocatore.ruolo}}
+        </div>
+        <div>
+            {{giocatore.spec}}
+        </div>
+        <div style="max-width: 30px; color: black; cursor: pointer;">
+            <svg (click)="carica(giocatore)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </div>
+        <div>
+            <form [formGroup]="formDisattiva" *ngIf="giocatore.isAttivo == '1'">
+                <button class="btnAtt" type="submit" (click)="disattiva(giocatore.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill-slash" viewBox="0 0 16 16">
+                        <path d="M13.879 10.414a2.501 2.501 0 0 0-3.465 3.465l3.465-3.465Zm.707.707-3.465 3.465a2.501 2.501 0 0 0 3.465-3.465Zm-4.56-1.096a3.5 3.5 0 1 1 4.949 4.95 3.5 3.5 0 0 1-4.95-4.95ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                    </svg>
+                </button>
+            </form>
+
+            <form [formGroup]="formAttiva" *ngIf="giocatore.isAttivo != '1'">
+                <button class="btnAtt" type="submit" (click)="attiva(giocatore.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                    </svg>
+                </button>
+            </form>
+            
+        </div>
+    </div>
+</div>

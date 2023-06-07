@@ -1,0 +1,85 @@
+#titolo{
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+#fin{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0;
+    width: 100%;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+#fin > *{
+    width: 50%;
+}
+
+#btnSub{
+    border: 1px solid grey;
+    background-color: blue;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.notizia{
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.notizia:nth-child(even){
+    background-color: rgb(215, 215, 215);
+}
+
+.notizia > div{
+    flex: 1 1 0;
+}
+
+.attiva, .disattiva{
+    width: 20px;
+    height: 20px;
+    border: 0.2px solid rgb(144, 144, 144);
+    border-radius: 20px;
+}
+
+.attiva{
+    background-color: green;
+}
+
+.disattiva{
+    background-color: red;
+}
+
+.modifica{
+    text-align: right;
+}
+
+.modifica > button{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 640px){
+    #titolo{
+        position: relative;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+    }
+
+    #fin > *{
+        width: 100%;
+    }
+}

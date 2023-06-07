@@ -1,0 +1,128 @@
+{
+  "configVersion": 1,
+  "timestamp": 1686087571313,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.b962a624bf15958e.js",
+        "/manifest.webmanifest",
+        "/polyfills.8d0cbe21c43bbb35.js",
+        "/runtime.67c1ebf02b0e5936.js",
+        "/scripts.a42171b3e983133a.js",
+        "/styles.553688979e0e53c7.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/img/bgv.png",
+        "/assets/img/bgvcena.jpg",
+        "/assets/img/bgvfinestagione.jpg",
+        "/assets/img/bgvlogo.jpg",
+        "/assets/img/bgvnero.png",
+        "/assets/img/icons/bgv128.png",
+        "/assets/img/icons/bgv144.png",
+        "/assets/img/icons/bgv152.png",
+        "/assets/img/icons/bgv192.png",
+        "/assets/img/icons/bgv384.png",
+        "/assets/img/icons/bgv512-1.png",
+        "/assets/img/icons/bgv512.png",
+        "/assets/img/icons/bgv72-1.png",
+        "/assets/img/icons/bgv72.png",
+        "/assets/img/icons/bgv96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-v1",
+      "patterns": [
+        "https:\\/\\/www\\.bgvsoccerclub\\.it\\/api\\/api\\.php"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 21600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/assets/img/bgv.png": "3e6bc13f65fbbd1db34b48fb85c1902c0979b76a",
+    "/assets/img/bgvcena.jpg": "89424cada9ab084694f9b6cef81a717c11d49f8a",
+    "/assets/img/bgvfinestagione.jpg": "34d886347d15a85ed7e50662d6f863ea66f75491",
+    "/assets/img/bgvlogo.jpg": "dc4805c57bd984c0722d193d8ee443ec7711a45c",
+    "/assets/img/bgvnero.png": "3275bc5afa673622e8d3a5eec22003e5aebe361b",
+    "/assets/img/icons/bgv128.png": "003fa21d5bd35f5657991e0ac6a8543f7de06637",
+    "/assets/img/icons/bgv144.png": "897f486163b18409ac3928af19cfdbf4de581a0f",
+    "/assets/img/icons/bgv152.png": "5a8b66ed01a478fb1bb0a65df950121d5db2f9c7",
+    "/assets/img/icons/bgv192.png": "0da0265159dc33e0b11f0c1782f813bd7eab1998",
+    "/assets/img/icons/bgv384.png": "31b295e1731f4ff92db73109e3d842c6621cc05a",
+    "/assets/img/icons/bgv512-1.png": "5ccd3ef08c8f839186eff3962a031ee8c187fdaf",
+    "/assets/img/icons/bgv512.png": "e0ffb085595ef96222a4012929d696b33ce9598a",
+    "/assets/img/icons/bgv72-1.png": "684b547dd190ce300aae588a3f082fae3635ca80",
+    "/assets/img/icons/bgv72.png": "684b547dd190ce300aae588a3f082fae3635ca80",
+    "/assets/img/icons/bgv96.png": "5c6534346afc19da6229867d947ef3b2fc65c664",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "899d7a1bf9bac390cbaaae910a6fba695d7dc46b",
+    "/main.b962a624bf15958e.js": "4ec7ad4c8c9d557801a639237ddfbd8899efa7a6",
+    "/manifest.webmanifest": "086f23aa44f7bb3752437469f5705d3081d03fdd",
+    "/polyfills.8d0cbe21c43bbb35.js": "fb8950d725dd61712b31b4dfc24f11357119c9c8",
+    "/runtime.67c1ebf02b0e5936.js": "246b274488382a806193e4e08393018b672b2edd",
+    "/scripts.a42171b3e983133a.js": "7da929c9f54bd81efec77e5cafd9a0b141ad3aa0",
+    "/styles.553688979e0e53c7.css": "66b124ac4f636260864d113c57ae80305a4fd1a7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
